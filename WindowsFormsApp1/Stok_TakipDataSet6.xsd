@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Stok_TakipDataSet6" targetNamespace="http://tempuri.org/Stok_TakipDataSet6.xsd" xmlns:mstns="http://tempuri.org/Stok_TakipDataSet6.xsd" xmlns="http://tempuri.org/Stok_TakipDataSet6.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Stok_TakipConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Stok_TakipConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default.Stok_TakipConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AnaDepoViewTableAdapter" GeneratorDataComponentClassName="AnaDepoViewTableAdapter" Name="AnaDepoView" UserDataComponentName="AnaDepoViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Stok_TakipConnectionString (Settings)" DbObjectName="Stok_Takip.dbo.AnaDepoView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT SIPARISNO, URUNID, MIKTAR, TARIH, MUSTERIID, ID, TOPLAMSATIS, MUSTERIAD, URUNAD FROM dbo.AnaDepoView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SIPARISNO" DataSetColumn="SIPARISNO" />
+              <Mapping SourceColumn="URUNID" DataSetColumn="URUNID" />
+              <Mapping SourceColumn="MIKTAR" DataSetColumn="MIKTAR" />
+              <Mapping SourceColumn="TARIH" DataSetColumn="TARIH" />
+              <Mapping SourceColumn="MUSTERIID" DataSetColumn="MUSTERIID" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="TOPLAMSATIS" DataSetColumn="TOPLAMSATIS" />
+              <Mapping SourceColumn="MUSTERIAD" DataSetColumn="MUSTERIAD" />
+              <Mapping SourceColumn="URUNAD" DataSetColumn="URUNAD" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Stok_TakipDataSet6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Stok_TakipDataSet6" msprop:Generator_UserDSName="Stok_TakipDataSet6">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AnaDepoView" msprop:Generator_TableClassName="AnaDepoViewDataTable" msprop:Generator_TableVarName="tableAnaDepoView" msprop:Generator_TablePropName="AnaDepoView" msprop:Generator_RowDeletingName="AnaDepoViewRowDeleting" msprop:Generator_RowChangingName="AnaDepoViewRowChanging" msprop:Generator_RowEvHandlerName="AnaDepoViewRowChangeEventHandler" msprop:Generator_RowDeletedName="AnaDepoViewRowDeleted" msprop:Generator_UserTableName="AnaDepoView" msprop:Generator_RowChangedName="AnaDepoViewRowChanged" msprop:Generator_RowEvArgName="AnaDepoViewRowChangeEvent" msprop:Generator_RowClassName="AnaDepoViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SIPARISNO" msprop:Generator_ColumnVarNameInTable="columnSIPARISNO" msprop:Generator_ColumnPropNameInRow="SIPARISNO" msprop:Generator_ColumnPropNameInTable="SIPARISNOColumn" msprop:Generator_UserColumnName="SIPARISNO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="URUNID" msprop:Generator_ColumnVarNameInTable="columnURUNID" msprop:Generator_ColumnPropNameInRow="URUNID" msprop:Generator_ColumnPropNameInTable="URUNIDColumn" msprop:Generator_UserColumnName="URUNID" type="xs:int" />
+              <xs:element name="MIKTAR" msprop:Generator_ColumnVarNameInTable="columnMIKTAR" msprop:Generator_ColumnPropNameInRow="MIKTAR" msprop:Generator_ColumnPropNameInTable="MIKTARColumn" msprop:Generator_UserColumnName="MIKTAR" type="xs:int" />
+              <xs:element name="TARIH" msprop:Generator_ColumnVarNameInTable="columnTARIH" msprop:Generator_ColumnPropNameInRow="TARIH" msprop:Generator_ColumnPropNameInTable="TARIHColumn" msprop:Generator_UserColumnName="TARIH" type="xs:dateTime" />
+              <xs:element name="MUSTERIID" msprop:Generator_ColumnVarNameInTable="columnMUSTERIID" msprop:Generator_ColumnPropNameInRow="MUSTERIID" msprop:Generator_ColumnPropNameInTable="MUSTERIIDColumn" msprop:Generator_UserColumnName="MUSTERIID" type="xs:int" />
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="TOPLAMSATIS" msprop:Generator_ColumnVarNameInTable="columnTOPLAMSATIS" msprop:Generator_ColumnPropNameInRow="TOPLAMSATIS" msprop:Generator_ColumnPropNameInTable="TOPLAMSATISColumn" msprop:Generator_UserColumnName="TOPLAMSATIS" type="xs:decimal" />
+              <xs:element name="MUSTERIAD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMUSTERIAD" msprop:Generator_ColumnPropNameInRow="MUSTERIAD" msprop:Generator_ColumnPropNameInTable="MUSTERIADColumn" msprop:Generator_UserColumnName="MUSTERIAD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="URUNAD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnURUNAD" msprop:Generator_ColumnPropNameInRow="URUNAD" msprop:Generator_ColumnPropNameInTable="URUNADColumn" msprop:Generator_UserColumnName="URUNAD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
