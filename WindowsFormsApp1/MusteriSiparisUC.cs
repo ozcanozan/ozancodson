@@ -453,6 +453,7 @@ namespace WindowsFormsApp1
                         int MalzemeID = Convert.ToInt32(r["MALZEMEID"].ToString());
                         int dusulecekmiktar = Convert.ToInt32(r["MIKTARI"].ToString()) * miktar;
                         int aradepodakimiktar = 0;
+                       
                         string query2 = "select * from ARADEPO WHERE MALZEMEID=" + MalzemeID;
                         using (SqlConnection con2 = new SqlConnection(this.mUSTERITableAdapter.Connection.ConnectionString))
                         {
@@ -466,7 +467,54 @@ namespace WindowsFormsApp1
                                 break;
                             }
                             if (aradepodakimiktar < dusulecekmiktar)
-                                return false;
+                            {
+                                int malzememiktar = 0;
+                                int icerikmiktar = 0;
+                                int uyariMiktari = 0;
+                                string malzemeAdi = "";
+                                string query3 = "SELECT * FROM [dbo].[MALZEME] WHERE ID=" + MalzemeID;
+                                using (SqlConnection con4 = new SqlConnection(this.mUSTERITableAdapter.Connection.ConnectionString))
+                                {
+                                    SqlCommand cmd3 = new SqlCommand(query3, con4);
+                                    SqlDataReader r3 = null;
+                                    con4.Open();
+                                    r3 = cmd3.ExecuteReader();
+                                    while (r3.Read())
+                                    {
+                                        malzememiktar = Convert.ToInt32(r3["MIKTARI"].ToString());
+                                        icerikmiktar=Convert.ToInt32(r3["ICERIKMIKTARI"].ToString());
+                                        uyariMiktari= Convert.ToInt32(r3["UYARIMIKTARI"].ToString());
+                                        malzemeAdi = r3["MALZEMEADI"].ToString();
+                                        break;
+                                    }
+                                    if (aradepodakimiktar + ( malzememiktar* icerikmiktar) < dusulecekmiktar)
+                                        return false;
+                                    else
+                                    {
+                                        while(aradepodakimiktar< dusulecekmiktar)
+                                        {
+                                            malzememiktar = malzememiktar - 1;
+                                            aradepodakimiktar = aradepodakimiktar + icerikmiktar;
+                                        }
+                                        if(malzememiktar<= uyariMiktari)
+                                        {
+                                            MessageBox.Show(malzemeAdi+" malzemesi için uyarı miktarına ulaşılmıştır.Miktar=" +malzememiktar);
+                                        }
+                                        SqlCommand cmd4 = new SqlCommand("update [dbo].[ARADEPO] set MIKTARI=@MIKTARI where MALZEMEID=@MALZEMEID", conn);
+                                        cmd4.Transaction = tran;
+                                        cmd4.Parameters.AddWithValue("@MALZEMEID", MalzemeID);
+                                        cmd4.Parameters.AddWithValue("@MIKTARI", aradepodakimiktar-dusulecekmiktar);
+                                        cmd4.ExecuteNonQuery();
+
+
+                                        SqlCommand cmd5 = new SqlCommand("update [dbo].[MALZEME] set MIKTARI=@MIKTARI where ID=@MALZEMEID", conn);
+                                        cmd5.Transaction = tran;
+                                        cmd5.Parameters.AddWithValue("@MALZEMEID", MalzemeID);
+                                        cmd5.Parameters.AddWithValue("@MIKTARI", malzememiktar);
+                                        cmd5.ExecuteNonQuery();
+                                    }
+                                }
+                            }
                             else
                             {
 

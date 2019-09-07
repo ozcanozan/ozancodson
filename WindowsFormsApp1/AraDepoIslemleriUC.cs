@@ -101,12 +101,12 @@ namespace WindowsFormsApp1
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             IDVariable = Convert.ToInt32(dgrdMalzeme.Rows[e.RowIndex].Cells[0].Value.ToString());
-            txt_BARKODNO.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txt_MALZEMEADI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txt_MIKTARI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txt_ALISFIYATI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txt_SATISFIYATI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txt_TARIH.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[6].Value.ToString();
+            //txt_BARKODNO.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[1].Value.ToString();
+            //txt_MALZEMEADI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[2].Value.ToString();
+            //txt_MIKTARI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[3].Value.ToString();
+            ////txt_ALISFIYATI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[4].Value.ToString();
+            ////txt_SATISFIYATI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[5].Value.ToString();
+            //txt_TARIH.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -161,48 +161,48 @@ namespace WindowsFormsApp1
             {
                 string barkod = item.Split('-').ToList()[0];
                 int malzemeID = getMalzemeID(barkod);
-                txt_BARKODNO.Text = barkod;
-                txt_MALZEMEADI.Text = item.Split('-').ToList()[1];
+                //txt_BARKODNO.Text = barkod;
+                //txt_MALZEMEADI.Text = item.Split('-').ToList()[1];
             }
 
         }
-        private void btnGuncelle_Click(object sender, EventArgs e)
-        {
+        //private void btnGuncelle_Click(object sender, EventArgs e)
+        //{
           
-            SqlConnection con = new SqlConnection(this.mALZEMETableAdapter.Connection.ConnectionString);
-            SqlCommand cmd;
-            int malzemeID = getMalzemeID(txt_BARKODNO.Text);
-            if (malzemeID == 0)
-            {
-                MessageBox.Show("Ara Depo bilgileri eksik olduğu için güncellenemedi!");
-                return;
-            }
-            else {
+        //    SqlConnection con = new SqlConnection(this.mALZEMETableAdapter.Connection.ConnectionString);
+        //    SqlCommand cmd;
+        //    int malzemeID = getMalzemeID(txt_BARKODNO.Text);
+        //    if (malzemeID == 0)
+        //    {
+        //        MessageBox.Show("Ara Depo bilgileri eksik olduğu için güncellenemedi!");
+        //        return;
+        //    }
+        //    else {
             
            
-            if (txt_BARKODNO.Text != "" && malzemeID != 0 && txt_MALZEMEADI.Text != "" && txt_MIKTARI.Text != "" && txt_ALISFIYATI.Text != "" && txt_SATISFIYATI.Text != "" && txt_TARIH.Text != "")
-            {
-                cmd = new SqlCommand("update [dbo].[ARADEPO] set MALZEMEADI=@MALZEMEADI, MIKTARI=@MIKTARI,ALISFIYATI=@ALISFIYATI,SATISFIYATI=@SATISFIYATI,TARIH=@TARIH where MALZEMEID=@ID", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@MALZEMEADI", txt_MALZEMEADI.Text);
+        //    if (txt_BARKODNO.Text != "" && malzemeID != 0 && txt_MALZEMEADI.Text != "" && txt_MIKTARI.Text !=  "" && txt_TARIH.Text != "")
+        //    {
+        //        cmd = new SqlCommand("update [dbo].[ARADEPO] set MALZEMEADI=@MALZEMEADI, MIKTARI=@MIKTARI,TARIH=@TARIH where MALZEMEID=@ID", con);
+        //        con.Open();
+        //        cmd.Parameters.AddWithValue("@MALZEMEADI", txt_MALZEMEADI.Text);
                
-                cmd.Parameters.AddWithValue("@MIKTARI",Int32.Parse(txt_MIKTARI.Text));
-                cmd.Parameters.AddWithValue("@ALISFIYATI", float.Parse(txt_ALISFIYATI.Text));
-                cmd.Parameters.AddWithValue("@SATISFIYATI",float.Parse(txt_SATISFIYATI.Text));
-                cmd.Parameters.AddWithValue("@TARIH", txt_TARIH.Text);
-                cmd.Parameters.AddWithValue("@ID",malzemeID);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("ARA DEPO Başarı ile güncellenmiştir.");
-                GetData("Select * from ARADEPO");
-                ClearData();
-            }
-            else
-            {
-                MessageBox.Show("Ara Depo bilgileri eksik olduğu için güncellenemedi!");
-            }
-        }
-        }
+        //        cmd.Parameters.AddWithValue("@MIKTARI",Int32.Parse(txt_MIKTARI.Text));
+        //        //cmd.Parameters.AddWithValue("@ALISFIYATI", float.Parse(txt_ALISFIYATI.Text));
+        //        //cmd.Parameters.AddWithValue("@SATISFIYATI",float.Parse(txt_SATISFIYATI.Text));
+        //        cmd.Parameters.AddWithValue("@TARIH", txt_TARIH.Text);
+        //        cmd.Parameters.AddWithValue("@ID",malzemeID);
+        //        cmd.ExecuteNonQuery();
+        //        con.Close();
+        //        MessageBox.Show("ARA DEPO Başarı ile güncellenmiştir.");
+        //        GetData("Select * from ARADEPO");
+        //        ClearData();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Ara Depo bilgileri eksik olduğu için güncellenemedi!");
+        //    }
+        //}
+        //}
 
         //Insert Data  
 
@@ -254,69 +254,69 @@ namespace WindowsFormsApp1
         private void dgrdMalzemeIslemleri_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             IDVariable = Convert.ToInt32(dgrdMalzeme.Rows[e.RowIndex].Cells[0].Value.ToString());
-            txt_BARKODNO.Text = getBarkodNo(Convert.ToInt32(dgrdMalzeme.Rows[e.RowIndex].Cells[1].Value.ToString()));
-            txt_MALZEMEADI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txt_MIKTARI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txt_ALISFIYATI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txt_SATISFIYATI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txt_TARIH.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[6].Value.ToString();
+            //txt_BARKODNO.Text = getBarkodNo(Convert.ToInt32(dgrdMalzeme.Rows[e.RowIndex].Cells[1].Value.ToString()));
+            //txt_MALZEMEADI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[2].Value.ToString();
+            //txt_MIKTARI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[3].Value.ToString();
+            ////txt_ALISFIYATI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[4].Value.ToString();
+            ////txt_SATISFIYATI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[5].Value.ToString();
+            //txt_TARIH.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
 
        
 
-        private void btnSil_Click_1(object sender, EventArgs e)
-        {
-            SqlConnection con = new SqlConnection(this.mALZEMETableAdapter.Connection.ConnectionString);
-            SqlCommand cmd;
+        //private void btnSil_Click_1(object sender, EventArgs e)
+        //{
+        //    SqlConnection con = new SqlConnection(this.mALZEMETableAdapter.Connection.ConnectionString);
+        //    SqlCommand cmd;
 
-            if (IDVariable != 0)
-            {
-                cmd = new SqlCommand("delete ARADEPO where ID=@id", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@id", IDVariable);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("ARADEPOdan başarı ile silinmiştir!");
-                GetData("Select * from ARADEPO");
-                ClearData();
-            }
-            else
-            {
-                MessageBox.Show("Silinecek ARADEPO mallemesini seçiniz");
-            }
-        }
+        //    if (IDVariable != 0)
+        //    {
+        //        cmd = new SqlCommand("delete ARADEPO where ID=@id", con);
+        //        con.Open();
+        //        cmd.Parameters.AddWithValue("@id", IDVariable);
+        //        cmd.ExecuteNonQuery();
+        //        con.Close();
+        //        MessageBox.Show("ARADEPOdan başarı ile silinmiştir!");
+        //        GetData("Select * from ARADEPO");
+        //        ClearData();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Silinecek ARADEPO mallemesini seçiniz");
+        //    }
+        //}
 
         private void btnAra_Click(object sender, EventArgs e)
         {
             GetData("Select * from ARADEPO where MALZEMEADI like '%" + txtAra.Text + "%'");
         }
 
-        private void btnEkle_Click_1(object sender, EventArgs e)
-        {
-            SqlConnection con = new SqlConnection(this.mALZEMETableAdapter.Connection.ConnectionString);
-            SqlCommand cmd;
-            int malzemeID = getMalzemeID(txt_BARKODNO.Text);
-            if (txt_BARKODNO.Text != "" && malzemeID != 0 && txt_MALZEMEADI.Text != "" && txt_MIKTARI.Text != "" && txt_ALISFIYATI.Text != "" && txt_SATISFIYATI.Text != "" && txt_TARIH.Text != "")
-            {
-                cmd = new SqlCommand("INSERT INTO [dbo].[ARADEPO]([MALZEMEID],[MALZEMEADI],[MIKTARI],[ALISFIYATI],[SATISFIYATI] ,[TARIH]) VALUES(@MALZEMEID,@MALZEMEADI,@MIKTARI,@ALISFIYATI,@SATISFIYATI,@TARIH)", con);
-                con.Open();
-                cmd.Parameters.AddWithValue("@MALZEMEADI", txt_MALZEMEADI.Text);
-                cmd.Parameters.AddWithValue("@MALZEMEID", malzemeID);
-                cmd.Parameters.AddWithValue("@MIKTARI", txt_MIKTARI.Text);
-                cmd.Parameters.AddWithValue("@ALISFIYATI", txt_ALISFIYATI.Text);
-                cmd.Parameters.AddWithValue("@SATISFIYATI", txt_SATISFIYATI.Text);
-                cmd.Parameters.AddWithValue("@TARIH", txt_TARIH.Text);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("ARA DEPOya Başarı ile eklenmiştir.");
-                GetData("Select * from ARADEPO");
-                ClearData();
-            }
-            else
-            {
-                MessageBox.Show("Ara Depo bilgileri eksik olduğu için kaydedilemedi!");
-            }
-        }
+        //private void btnEkle_Click_1(object sender, EventArgs e)
+        //{
+        //    SqlConnection con = new SqlConnection(this.mALZEMETableAdapter.Connection.ConnectionString);
+        //    SqlCommand cmd;
+        //    int malzemeID = getMalzemeID(txt_BARKODNO.Text);
+        //    if (txt_BARKODNO.Text != "" && malzemeID != 0 && txt_MALZEMEADI.Text != "" && txt_MIKTARI.Text != "" && txt_TARIH.Text != "")
+        //    {
+        //        cmd = new SqlCommand("INSERT INTO [dbo].[ARADEPO]([MALZEMEID],[MALZEMEADI],[MIKTARI],[TARIH]) VALUES(@MALZEMEID,@MALZEMEADI,@MIKTARI,@TARIH)", con);
+        //        con.Open();
+        //        cmd.Parameters.AddWithValue("@MALZEMEADI", txt_MALZEMEADI.Text);
+        //        cmd.Parameters.AddWithValue("@MALZEMEID", malzemeID);
+        //        cmd.Parameters.AddWithValue("@MIKTARI", txt_MIKTARI.Text);
+        //        //cmd.Parameters.AddWithValue("@ALISFIYATI", txt_ALISFIYATI.Text);
+        //        //cmd.Parameters.AddWithValue("@SATISFIYATI", txt_SATISFIYATI.Text);
+        //        cmd.Parameters.AddWithValue("@TARIH", txt_TARIH.Text);
+        //        cmd.ExecuteNonQuery();
+        //        con.Close();
+        //        MessageBox.Show("ARA DEPOya Başarı ile eklenmiştir.");
+        //        GetData("Select * from ARADEPO");
+        //        ClearData();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Ara Depo bilgileri eksik olduğu için kaydedilemedi!");
+        //    }
+        //}
 
         private void btnMalzemeAra_Click(object sender, EventArgs e)
         {
@@ -327,7 +327,11 @@ namespace WindowsFormsApp1
         {
 
         }
-     
+
+        private void Txt_TARIH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
     

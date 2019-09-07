@@ -40,21 +40,6 @@
             this.mALZEMEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stok_TakipDataSet3 = new WindowsFormsApp1.Stok_TakipDataSet3();
             this.mALZEMETableAdapter = new WindowsFormsApp1.Stok_TakipDataSet3TableAdapters.MALZEMETableAdapter();
-            this.txt_TARIH = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txt_SATISFIYATI = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txt_ALISFIYATI = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_MIKTARI = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_MALZEMEADI = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_BARKODNO = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnGuncelle = new System.Windows.Forms.Button();
-            this.btnEkle = new System.Windows.Forms.Button();
-            this.btnSil = new System.Windows.Forms.Button();
             this.txtAra = new System.Windows.Forms.TextBox();
             this.btnAra = new System.Windows.Forms.Button();
             this.malzemeListbox = new System.Windows.Forms.CheckedListBox();
@@ -124,6 +109,7 @@
             this.aLISFIYATIDataGridViewTextBoxColumn.HeaderText = "ALISFIYATI";
             this.aLISFIYATIDataGridViewTextBoxColumn.MinimumWidth = 100;
             this.aLISFIYATIDataGridViewTextBoxColumn.Name = "aLISFIYATIDataGridViewTextBoxColumn";
+            this.aLISFIYATIDataGridViewTextBoxColumn.Visible = false;
             // 
             // sATISFIYATIDataGridViewTextBoxColumn
             // 
@@ -131,6 +117,7 @@
             this.sATISFIYATIDataGridViewTextBoxColumn.HeaderText = "SATISFIYATI";
             this.sATISFIYATIDataGridViewTextBoxColumn.MinimumWidth = 100;
             this.sATISFIYATIDataGridViewTextBoxColumn.Name = "sATISFIYATIDataGridViewTextBoxColumn";
+            this.sATISFIYATIDataGridViewTextBoxColumn.Visible = false;
             // 
             // tARIHDataGridViewTextBoxColumn
             // 
@@ -153,145 +140,6 @@
             // mALZEMETableAdapter
             // 
             this.mALZEMETableAdapter.ClearBeforeFill = true;
-            // 
-            // txt_TARIH
-            // 
-            this.txt_TARIH.Location = new System.Drawing.Point(1194, 551);
-            this.txt_TARIH.Name = "txt_TARIH";
-            this.txt_TARIH.Size = new System.Drawing.Size(200, 21);
-            this.txt_TARIH.TabIndex = 39;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1052, 551);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 16);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "Tarih";
-            // 
-            // txt_SATISFIYATI
-            // 
-            this.txt_SATISFIYATI.Location = new System.Drawing.Point(1194, 508);
-            this.txt_SATISFIYATI.Name = "txt_SATISFIYATI";
-            this.txt_SATISFIYATI.Size = new System.Drawing.Size(200, 21);
-            this.txt_SATISFIYATI.TabIndex = 37;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1052, 508);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 16);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Satış Fiyatı";
-            // 
-            // txt_ALISFIYATI
-            // 
-            this.txt_ALISFIYATI.Location = new System.Drawing.Point(1194, 465);
-            this.txt_ALISFIYATI.Name = "txt_ALISFIYATI";
-            this.txt_ALISFIYATI.Size = new System.Drawing.Size(200, 21);
-            this.txt_ALISFIYATI.TabIndex = 35;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1052, 465);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 16);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Alış Fiyatı";
-            // 
-            // txt_MIKTARI
-            // 
-            this.txt_MIKTARI.Location = new System.Drawing.Point(1194, 421);
-            this.txt_MIKTARI.Multiline = true;
-            this.txt_MIKTARI.Name = "txt_MIKTARI";
-            this.txt_MIKTARI.Size = new System.Drawing.Size(200, 22);
-            this.txt_MIKTARI.TabIndex = 33;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1053, 421);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 16);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Miktarı";
-            // 
-            // txt_MALZEMEADI
-            // 
-            this.txt_MALZEMEADI.Location = new System.Drawing.Point(1194, 378);
-            this.txt_MALZEMEADI.Name = "txt_MALZEMEADI";
-            this.txt_MALZEMEADI.Size = new System.Drawing.Size(200, 21);
-            this.txt_MALZEMEADI.TabIndex = 31;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1053, 378);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 16);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Malzeme Adı";
-            // 
-            // txt_BARKODNO
-            // 
-            this.txt_BARKODNO.Location = new System.Drawing.Point(1194, 332);
-            this.txt_BARKODNO.Name = "txt_BARKODNO";
-            this.txt_BARKODNO.Size = new System.Drawing.Size(200, 21);
-            this.txt_BARKODNO.TabIndex = 29;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1052, 332);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 16);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Barkod No";
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuncelle.Location = new System.Drawing.Point(1185, 673);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(80, 43);
-            this.btnGuncelle.TabIndex = 27;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = false;
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
-            // 
-            // btnEkle
-            // 
-            this.btnEkle.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEkle.Location = new System.Drawing.Point(1056, 673);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(80, 43);
-            this.btnEkle.TabIndex = 26;
-            this.btnEkle.Text = "Ekle";
-            this.btnEkle.UseVisualStyleBackColor = false;
-            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click_1);
-            // 
-            // btnSil
-            // 
-            this.btnSil.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSil.Location = new System.Drawing.Point(1314, 673);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(80, 43);
-            this.btnSil.TabIndex = 25;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = false;
-            this.btnSil.Click += new System.EventHandler(this.btnSil_Click_1);
             // 
             // txtAra
             // 
@@ -350,21 +198,6 @@
             this.Controls.Add(this.malzemeListbox);
             this.Controls.Add(this.txtAra);
             this.Controls.Add(this.btnAra);
-            this.Controls.Add(this.txt_TARIH);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txt_SATISFIYATI);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txt_ALISFIYATI);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txt_MIKTARI);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_MALZEMEADI);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_BARKODNO);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnGuncelle);
-            this.Controls.Add(this.btnEkle);
-            this.Controls.Add(this.btnSil);
             this.Controls.Add(this.dgrdMalzeme);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -384,21 +217,6 @@
         private System.Windows.Forms.BindingSource mALZEMEBindingSource;
         private Stok_TakipDataSet3 stok_TakipDataSet3;
         private Stok_TakipDataSet3TableAdapters.MALZEMETableAdapter mALZEMETableAdapter;
-        private System.Windows.Forms.TextBox txt_TARIH;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_SATISFIYATI;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_ALISFIYATI;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_MIKTARI;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_MALZEMEADI;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_BARKODNO;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnGuncelle;
-        private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDODataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox txtAra;
         private System.Windows.Forms.Button btnAra;

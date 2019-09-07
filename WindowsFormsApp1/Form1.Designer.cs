@@ -31,7 +31,6 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnUretimDepo = new System.Windows.Forms.Button();
             this.btnUrunMalzemeİşlemleri = new System.Windows.Forms.Button();
             this.btnMalzemeIslemleri = new System.Windows.Forms.Button();
             this.btnAraDepo = new System.Windows.Forms.Button();
@@ -47,7 +46,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel2.Controls.Add(this.btnUretimDepo);
             this.panel2.Controls.Add(this.btnUrunMalzemeİşlemleri);
             this.panel2.Controls.Add(this.btnMalzemeIslemleri);
             this.panel2.Controls.Add(this.btnAraDepo);
@@ -61,22 +59,11 @@
             this.panel2.Size = new System.Drawing.Size(279, 913);
             this.panel2.TabIndex = 1;
             // 
-            // btnUretimDepo
-            // 
-            this.btnUretimDepo.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnUretimDepo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUretimDepo.Location = new System.Drawing.Point(41, 473);
-            this.btnUretimDepo.Name = "btnUretimDepo";
-            this.btnUretimDepo.Size = new System.Drawing.Size(201, 50);
-            this.btnUretimDepo.TabIndex = 10;
-            this.btnUretimDepo.Text = "Üretim Depo";
-            this.btnUretimDepo.UseVisualStyleBackColor = false;
-            // 
             // btnUrunMalzemeİşlemleri
             // 
             this.btnUrunMalzemeİşlemleri.BackColor = System.Drawing.Color.AliceBlue;
             this.btnUrunMalzemeİşlemleri.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUrunMalzemeİşlemleri.Location = new System.Drawing.Point(41, 315);
+            this.btnUrunMalzemeİşlemleri.Location = new System.Drawing.Point(41, 318);
             this.btnUrunMalzemeİşlemleri.Name = "btnUrunMalzemeİşlemleri";
             this.btnUrunMalzemeİşlemleri.Size = new System.Drawing.Size(201, 50);
             this.btnUrunMalzemeİşlemleri.TabIndex = 6;
@@ -112,7 +99,7 @@
             // 
             this.btnÜrünİşlemleri.BackColor = System.Drawing.Color.AliceBlue;
             this.btnÜrünİşlemleri.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnÜrünİşlemleri.Location = new System.Drawing.Point(41, 237);
+            this.btnÜrünİşlemleri.Location = new System.Drawing.Point(41, 239);
             this.btnÜrünİşlemleri.Name = "btnÜrünİşlemleri";
             this.btnÜrünİşlemleri.Size = new System.Drawing.Size(201, 50);
             this.btnÜrünİşlemleri.TabIndex = 7;
@@ -124,7 +111,7 @@
             // 
             this.btnMüşteriİşlemleri.BackColor = System.Drawing.Color.AliceBlue;
             this.btnMüşteriİşlemleri.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMüşteriİşlemleri.Location = new System.Drawing.Point(41, 549);
+            this.btnMüşteriİşlemleri.Location = new System.Drawing.Point(41, 476);
             this.btnMüşteriİşlemleri.Name = "btnMüşteriİşlemleri";
             this.btnMüşteriİşlemleri.Size = new System.Drawing.Size(201, 50);
             this.btnMüşteriİşlemleri.TabIndex = 5;
@@ -136,11 +123,11 @@
             // 
             this.btnSiparişKontrol.BackColor = System.Drawing.Color.AliceBlue;
             this.btnSiparişKontrol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiparişKontrol.Location = new System.Drawing.Point(41, 713);
+            this.btnSiparişKontrol.Location = new System.Drawing.Point(41, 634);
             this.btnSiparişKontrol.Name = "btnSiparişKontrol";
             this.btnSiparişKontrol.Size = new System.Drawing.Size(201, 50);
             this.btnSiparişKontrol.TabIndex = 2;
-            this.btnSiparişKontrol.Text = "Sipariş Kontrol/Ana Depo";
+            this.btnSiparişKontrol.Text = "Bitmiş Ürün Deposu/Sipariş Kontrol/Ana Depo";
             this.btnSiparişKontrol.UseVisualStyleBackColor = false;
             this.btnSiparişKontrol.Click += new System.EventHandler(this.btnSiparişKontrol_Click);
             // 
@@ -148,7 +135,7 @@
             // 
             this.btnMüşteriSipariş.BackColor = System.Drawing.Color.AliceBlue;
             this.btnMüşteriSipariş.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMüşteriSipariş.Location = new System.Drawing.Point(41, 631);
+            this.btnMüşteriSipariş.Location = new System.Drawing.Point(41, 555);
             this.btnMüşteriSipariş.Name = "btnMüşteriSipariş";
             this.btnMüşteriSipariş.Size = new System.Drawing.Size(201, 50);
             this.btnMüşteriSipariş.TabIndex = 1;
@@ -160,7 +147,7 @@
             // 
             this.btnKategoriİşlemleri.BackColor = System.Drawing.Color.AliceBlue;
             this.btnKategoriİşlemleri.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKategoriİşlemleri.Location = new System.Drawing.Point(41, 159);
+            this.btnKategoriİşlemleri.Location = new System.Drawing.Point(41, 160);
             this.btnKategoriİşlemleri.Name = "btnKategoriİşlemleri";
             this.btnKategoriİşlemleri.Size = new System.Drawing.Size(201, 50);
             this.btnKategoriİşlemleri.TabIndex = 0;
@@ -207,7 +194,6 @@
         private System.Windows.Forms.Button btnAraDepo;
         private System.Windows.Forms.Button btnMalzemeIslemleri;
         private System.Windows.Forms.Panel pnlRight;
-        private System.Windows.Forms.Button btnUretimDepo;
     }
 }
 

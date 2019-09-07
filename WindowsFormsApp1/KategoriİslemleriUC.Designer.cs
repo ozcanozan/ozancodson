@@ -41,13 +41,13 @@
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.dgrdKategori = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kATEGORIBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.stok_TakipDataSet5 = new WindowsFormsApp1.Stok_TakipDataSet5();
             this.kATEGORITableAdapter1 = new WindowsFormsApp1.Stok_TakipDataSet5TableAdapters.KATEGORITableAdapter();
             this.txtAra = new System.Windows.Forms.TextBox();
             this.btnAra = new System.Windows.Forms.Button();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.stok_TakipDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mUSTERIBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kATEGORIBindingSource)).BeginInit();
@@ -88,7 +88,7 @@
             // 
             // txt_Ad
             // 
-            this.txt_Ad.Location = new System.Drawing.Point(1202, 340);
+            this.txt_Ad.Location = new System.Drawing.Point(1202, 333);
             this.txt_Ad.Name = "txt_Ad";
             this.txt_Ad.Size = new System.Drawing.Size(200, 21);
             this.txt_Ad.TabIndex = 29;
@@ -97,7 +97,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1060, 344);
+            this.label1.Location = new System.Drawing.Point(1060, 338);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 16);
             this.label1.TabIndex = 28;
@@ -107,7 +107,7 @@
             // 
             this.btnGuncelle.BackColor = System.Drawing.Color.AliceBlue;
             this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuncelle.Location = new System.Drawing.Point(1193, 421);
+            this.btnGuncelle.Location = new System.Drawing.Point(1193, 414);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(80, 43);
             this.btnGuncelle.TabIndex = 27;
@@ -119,7 +119,7 @@
             // 
             this.btnEkle.BackColor = System.Drawing.Color.AliceBlue;
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEkle.Location = new System.Drawing.Point(1064, 421);
+            this.btnEkle.Location = new System.Drawing.Point(1063, 414);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(80, 43);
             this.btnEkle.TabIndex = 26;
@@ -131,7 +131,7 @@
             // 
             this.btnSil.BackColor = System.Drawing.Color.AliceBlue;
             this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSil.Location = new System.Drawing.Point(1322, 421);
+            this.btnSil.Location = new System.Drawing.Point(1322, 414);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(80, 43);
             this.btnSil.TabIndex = 25;
@@ -148,47 +148,13 @@
             this.iDDataGridViewTextBoxColumn,
             this.aDDataGridViewTextBoxColumn});
             this.dgrdKategori.DataSource = this.kATEGORIBindingSource1;
-            this.dgrdKategori.Location = new System.Drawing.Point(18, 161);
+            this.dgrdKategori.Location = new System.Drawing.Point(18, 155);
             this.dgrdKategori.Name = "dgrdKategori";
             this.dgrdKategori.Size = new System.Drawing.Size(1016, 560);
             this.dgrdKategori.TabIndex = 30;
             this.dgrdKategori.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrdKategori_CellContentClick);
             this.dgrdKategori.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrdKategori_CellContentDoubleClick);
             this.dgrdKategori.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgrdKategori_RowHeaderMouseClick);
-            // 
-            // kATEGORIBindingSource1
-            // 
-            this.kATEGORIBindingSource1.DataMember = "KATEGORI";
-            this.kATEGORIBindingSource1.DataSource = this.stok_TakipDataSet5;
-            // 
-            // stok_TakipDataSet5
-            // 
-            this.stok_TakipDataSet5.DataSetName = "Stok_TakipDataSet5";
-            this.stok_TakipDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kATEGORITableAdapter1
-            // 
-            this.kATEGORITableAdapter1.ClearBeforeFill = true;
-            // 
-            // txtAra
-            // 
-            this.txtAra.Location = new System.Drawing.Point(632, 96);
-            this.txtAra.Name = "txtAra";
-            this.txtAra.Size = new System.Drawing.Size(266, 21);
-            this.txtAra.TabIndex = 31;
-            this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged);
-            // 
-            // btnAra
-            // 
-            this.btnAra.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAra.Location = new System.Drawing.Point(929, 85);
-            this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(105, 43);
-            this.btnAra.TabIndex = 32;
-            this.btnAra.Text = "Ara";
-            this.btnAra.UseVisualStyleBackColor = false;
-            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -206,6 +172,40 @@
             this.aDDataGridViewTextBoxColumn.MinimumWidth = 500;
             this.aDDataGridViewTextBoxColumn.Name = "aDDataGridViewTextBoxColumn";
             this.aDDataGridViewTextBoxColumn.Width = 500;
+            // 
+            // kATEGORIBindingSource1
+            // 
+            this.kATEGORIBindingSource1.DataMember = "KATEGORI";
+            this.kATEGORIBindingSource1.DataSource = this.stok_TakipDataSet5;
+            // 
+            // stok_TakipDataSet5
+            // 
+            this.stok_TakipDataSet5.DataSetName = "Stok_TakipDataSet5";
+            this.stok_TakipDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kATEGORITableAdapter1
+            // 
+            this.kATEGORITableAdapter1.ClearBeforeFill = true;
+            // 
+            // txtAra
+            // 
+            this.txtAra.Location = new System.Drawing.Point(632, 90);
+            this.txtAra.Name = "txtAra";
+            this.txtAra.Size = new System.Drawing.Size(266, 21);
+            this.txtAra.TabIndex = 31;
+            this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged);
+            // 
+            // btnAra
+            // 
+            this.btnAra.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAra.Location = new System.Drawing.Point(929, 79);
+            this.btnAra.Name = "btnAra";
+            this.btnAra.Size = new System.Drawing.Size(105, 43);
+            this.btnAra.TabIndex = 32;
+            this.btnAra.Text = "Ara";
+            this.btnAra.UseVisualStyleBackColor = false;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // KategoriİslemleriUC
             // 

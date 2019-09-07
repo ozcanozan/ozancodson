@@ -41,20 +41,20 @@
             this.anaDepoViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.anaDepoViewTableAdapter = new WindowsFormsApp1.Stok_TakipDataSet6TableAdapters.AnaDepoViewTableAdapter();
             this.dgrdSiparisKontrol = new System.Windows.Forms.DataGridView();
-            this.sIPARISNODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uRUNIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mIKTARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tARIHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mUSTERIIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tOPLAMSATISDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mUSTERIADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vKNTCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sORUMLUADSOYADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uRUNADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anaDepoViewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.stok_TakipDataSet7 = new WindowsFormsApp1.Stok_TakipDataSet7();
             this.anaDepoViewTableAdapter1 = new WindowsFormsApp1.Stok_TakipDataSet7TableAdapters.AnaDepoViewTableAdapter();
+            this.mUSTERIADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uRUNADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mIKTARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sIPARISNODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uRUNIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tOPLAMSATISDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tARIHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mUSTERIIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vKNTCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sORUMLUADSOYADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.sIPARISDURUMUBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stok_TakipDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stok_TakipDataSet6)).BeginInit();
@@ -145,28 +145,70 @@
             this.dgrdSiparisKontrol.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgrdSiparisKontrol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrdSiparisKontrol.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mUSTERIADDataGridViewTextBoxColumn,
+            this.uRUNADDataGridViewTextBoxColumn,
+            this.mIKTARDataGridViewTextBoxColumn,
             this.sIPARISNODataGridViewTextBoxColumn,
             this.uRUNIDDataGridViewTextBoxColumn,
-            this.mIKTARDataGridViewTextBoxColumn,
+            this.tOPLAMSATISDataGridViewTextBoxColumn,
             this.tARIHDataGridViewTextBoxColumn,
             this.mUSTERIIDDataGridViewTextBoxColumn,
             this.iDDataGridViewTextBoxColumn,
-            this.tOPLAMSATISDataGridViewTextBoxColumn,
-            this.mUSTERIADDataGridViewTextBoxColumn,
             this.vKNTCDataGridViewTextBoxColumn,
-            this.sORUMLUADSOYADDataGridViewTextBoxColumn,
-            this.uRUNADDataGridViewTextBoxColumn});
+            this.sORUMLUADSOYADDataGridViewTextBoxColumn});
             this.dgrdSiparisKontrol.DataSource = this.anaDepoViewBindingSource1;
-            this.dgrdSiparisKontrol.Location = new System.Drawing.Point(24, 204);
+            this.dgrdSiparisKontrol.Location = new System.Drawing.Point(4, 218);
             this.dgrdSiparisKontrol.Name = "dgrdSiparisKontrol";
-            this.dgrdSiparisKontrol.Size = new System.Drawing.Size(968, 251);
+            this.dgrdSiparisKontrol.Size = new System.Drawing.Size(995, 388);
             this.dgrdSiparisKontrol.TabIndex = 42;
+            // 
+            // anaDepoViewBindingSource1
+            // 
+            this.anaDepoViewBindingSource1.DataMember = "AnaDepoView";
+            this.anaDepoViewBindingSource1.DataSource = this.stok_TakipDataSet7;
+            // 
+            // stok_TakipDataSet7
+            // 
+            this.stok_TakipDataSet7.DataSetName = "Stok_TakipDataSet7";
+            this.stok_TakipDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // anaDepoViewTableAdapter1
+            // 
+            this.anaDepoViewTableAdapter1.ClearBeforeFill = true;
+            // 
+            // mUSTERIADDataGridViewTextBoxColumn
+            // 
+            this.mUSTERIADDataGridViewTextBoxColumn.DataPropertyName = "MUSTERIAD";
+            this.mUSTERIADDataGridViewTextBoxColumn.HeaderText = "MUSTERIAD";
+            this.mUSTERIADDataGridViewTextBoxColumn.MinimumWidth = 200;
+            this.mUSTERIADDataGridViewTextBoxColumn.Name = "mUSTERIADDataGridViewTextBoxColumn";
+            this.mUSTERIADDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mUSTERIADDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // uRUNADDataGridViewTextBoxColumn
+            // 
+            this.uRUNADDataGridViewTextBoxColumn.DataPropertyName = "URUNAD";
+            this.uRUNADDataGridViewTextBoxColumn.HeaderText = "URUNAD";
+            this.uRUNADDataGridViewTextBoxColumn.MinimumWidth = 200;
+            this.uRUNADDataGridViewTextBoxColumn.Name = "uRUNADDataGridViewTextBoxColumn";
+            this.uRUNADDataGridViewTextBoxColumn.ReadOnly = true;
+            this.uRUNADDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // mIKTARDataGridViewTextBoxColumn
+            // 
+            this.mIKTARDataGridViewTextBoxColumn.DataPropertyName = "MIKTAR";
+            this.mIKTARDataGridViewTextBoxColumn.HeaderText = "MIKTAR";
+            this.mIKTARDataGridViewTextBoxColumn.MinimumWidth = 100;
+            this.mIKTARDataGridViewTextBoxColumn.Name = "mIKTARDataGridViewTextBoxColumn";
             // 
             // sIPARISNODataGridViewTextBoxColumn
             // 
             this.sIPARISNODataGridViewTextBoxColumn.DataPropertyName = "SIPARISNO";
             this.sIPARISNODataGridViewTextBoxColumn.HeaderText = "SIPARISNO";
+            this.sIPARISNODataGridViewTextBoxColumn.MinimumWidth = 150;
             this.sIPARISNODataGridViewTextBoxColumn.Name = "sIPARISNODataGridViewTextBoxColumn";
+            this.sIPARISNODataGridViewTextBoxColumn.Visible = false;
+            this.sIPARISNODataGridViewTextBoxColumn.Width = 150;
             // 
             // uRUNIDDataGridViewTextBoxColumn
             // 
@@ -175,17 +217,21 @@
             this.uRUNIDDataGridViewTextBoxColumn.Name = "uRUNIDDataGridViewTextBoxColumn";
             this.uRUNIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // mIKTARDataGridViewTextBoxColumn
+            // tOPLAMSATISDataGridViewTextBoxColumn
             // 
-            this.mIKTARDataGridViewTextBoxColumn.DataPropertyName = "MIKTAR";
-            this.mIKTARDataGridViewTextBoxColumn.HeaderText = "MIKTAR";
-            this.mIKTARDataGridViewTextBoxColumn.Name = "mIKTARDataGridViewTextBoxColumn";
+            this.tOPLAMSATISDataGridViewTextBoxColumn.DataPropertyName = "TOPLAMSATIS";
+            this.tOPLAMSATISDataGridViewTextBoxColumn.HeaderText = "TOPLAMSATIS";
+            this.tOPLAMSATISDataGridViewTextBoxColumn.MinimumWidth = 200;
+            this.tOPLAMSATISDataGridViewTextBoxColumn.Name = "tOPLAMSATISDataGridViewTextBoxColumn";
+            this.tOPLAMSATISDataGridViewTextBoxColumn.Width = 200;
             // 
             // tARIHDataGridViewTextBoxColumn
             // 
             this.tARIHDataGridViewTextBoxColumn.DataPropertyName = "TARIH";
             this.tARIHDataGridViewTextBoxColumn.HeaderText = "TARIH";
+            this.tARIHDataGridViewTextBoxColumn.MinimumWidth = 250;
             this.tARIHDataGridViewTextBoxColumn.Name = "tARIHDataGridViewTextBoxColumn";
+            this.tARIHDataGridViewTextBoxColumn.Width = 250;
             // 
             // mUSTERIIDDataGridViewTextBoxColumn
             // 
@@ -202,25 +248,13 @@
             this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             this.iDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // tOPLAMSATISDataGridViewTextBoxColumn
-            // 
-            this.tOPLAMSATISDataGridViewTextBoxColumn.DataPropertyName = "TOPLAMSATIS";
-            this.tOPLAMSATISDataGridViewTextBoxColumn.HeaderText = "TOPLAMSATIS";
-            this.tOPLAMSATISDataGridViewTextBoxColumn.Name = "tOPLAMSATISDataGridViewTextBoxColumn";
-            // 
-            // mUSTERIADDataGridViewTextBoxColumn
-            // 
-            this.mUSTERIADDataGridViewTextBoxColumn.DataPropertyName = "MUSTERIAD";
-            this.mUSTERIADDataGridViewTextBoxColumn.HeaderText = "MUSTERIAD";
-            this.mUSTERIADDataGridViewTextBoxColumn.Name = "mUSTERIADDataGridViewTextBoxColumn";
-            this.mUSTERIADDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // vKNTCDataGridViewTextBoxColumn
             // 
             this.vKNTCDataGridViewTextBoxColumn.DataPropertyName = "VKN_TC";
             this.vKNTCDataGridViewTextBoxColumn.HeaderText = "VKN_TC";
             this.vKNTCDataGridViewTextBoxColumn.Name = "vKNTCDataGridViewTextBoxColumn";
             this.vKNTCDataGridViewTextBoxColumn.ReadOnly = true;
+            this.vKNTCDataGridViewTextBoxColumn.Visible = false;
             // 
             // sORUMLUADSOYADDataGridViewTextBoxColumn
             // 
@@ -228,27 +262,7 @@
             this.sORUMLUADSOYADDataGridViewTextBoxColumn.HeaderText = "SORUMLUADSOYAD";
             this.sORUMLUADSOYADDataGridViewTextBoxColumn.Name = "sORUMLUADSOYADDataGridViewTextBoxColumn";
             this.sORUMLUADSOYADDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // uRUNADDataGridViewTextBoxColumn
-            // 
-            this.uRUNADDataGridViewTextBoxColumn.DataPropertyName = "URUNAD";
-            this.uRUNADDataGridViewTextBoxColumn.HeaderText = "URUNAD";
-            this.uRUNADDataGridViewTextBoxColumn.Name = "uRUNADDataGridViewTextBoxColumn";
-            this.uRUNADDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // anaDepoViewBindingSource1
-            // 
-            this.anaDepoViewBindingSource1.DataMember = "AnaDepoView";
-            this.anaDepoViewBindingSource1.DataSource = this.stok_TakipDataSet7;
-            // 
-            // stok_TakipDataSet7
-            // 
-            this.stok_TakipDataSet7.DataSetName = "Stok_TakipDataSet7";
-            this.stok_TakipDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // anaDepoViewTableAdapter1
-            // 
-            this.anaDepoViewTableAdapter1.ClearBeforeFill = true;
+            this.sORUMLUADSOYADDataGridViewTextBoxColumn.Visible = false;
             // 
             // SiparisKontrolUC
             // 
@@ -292,16 +306,16 @@
         private System.Windows.Forms.BindingSource anaDepoViewBindingSource1;
         private Stok_TakipDataSet7 stok_TakipDataSet7;
         private Stok_TakipDataSet7TableAdapters.AnaDepoViewTableAdapter anaDepoViewTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mUSTERIADDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uRUNADDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mIKTARDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sIPARISNODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn uRUNIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mIKTARDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tOPLAMSATISDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tARIHDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mUSTERIIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tOPLAMSATISDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mUSTERIADDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vKNTCDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sORUMLUADSOYADDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uRUNADDataGridViewTextBoxColumn;
     }
 }

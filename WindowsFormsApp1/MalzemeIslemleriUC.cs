@@ -74,12 +74,15 @@ namespace WindowsFormsApp1
         {
             SqlConnection con = new SqlConnection(this.mALZEMETableAdapter.Connection.ConnectionString);
             SqlCommand cmd;
-            if (txt_BARKODNO.Text != "" && txt_MALZEMEADI.Text != "")
+            if (txt_BARKODNO.Text != "" && txt_MALZEMEADI.Text != "" && txt_MIKTARI.Text != "")
             {
-                cmd = new SqlCommand("INSERT INTO [dbo].[MALZEME]([BARKODNO],[MALZEMEADI]) VALUES(@BARKODNO,@MALZEMEADI)", con);
+                cmd = new SqlCommand("INSERT INTO [dbo].[MALZEME]([BARKODNO],[MALZEMEADI],[MIKTARI],[ICERIKMIKTARI],[UYARIMIKTARI]) VALUES(@BARKODNO,@MALZEMEADI,@MIKTARI,@ICERIKMIKTARI,@UYARIMIKTARI)", con);
                 con.Open();
                 cmd.Parameters.AddWithValue("@BARKODNO", txt_BARKODNO.Text);
                 cmd.Parameters.AddWithValue("@MALZEMEADI", txt_MALZEMEADI.Text);
+                cmd.Parameters.AddWithValue("@MIKTARI", txt_MIKTARI.Text);
+                cmd.Parameters.AddWithValue("@ICERIKMIKTARI", txtİcerikMiktari.Text);
+                cmd.Parameters.AddWithValue("@UYARIMIKTARI", txt_uyariMiktari.Text);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Malzeme Başarı ile eklenmiştir.");
@@ -121,6 +124,9 @@ namespace WindowsFormsApp1
             IDVariable = Convert.ToInt32(dgrdMalzeme.Rows[e.RowIndex].Cells[0].Value.ToString());
             txt_BARKODNO.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[1].Value.ToString();
             txt_MALZEMEADI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txt_MIKTARI.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txt_uyariMiktari.Text= dgrdMalzeme.Rows[e.RowIndex].Cells[5].Value.ToString(); 
+            txtİcerikMiktari.Text = dgrdMalzeme.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
  
@@ -167,14 +173,17 @@ namespace WindowsFormsApp1
                 if (txt_BARKODNO.Text != "" && txt_MALZEMEADI.Text != "")
                 {
 
-                    cmd = new SqlCommand("update [dbo].[MALZEME] set BARKODNO=@BARKODNO,MALZEMEADI=@MALZEMEADI where ID=@ID", con);
+                    cmd = new SqlCommand("update [dbo].[MALZEME] set BARKODNO=@BARKODNO,MALZEMEADI=@MALZEMEADI,MIKTARI=@MIKTARI,ICERIKMIKTARI=@ICERIKMIKTARI,UYARIMIKTARI=@UYARIMIKTARI where ID=@ID", con);
                     con.Open();
                     cmd.Parameters.AddWithValue("@ID", IDVariable);
                     cmd.Parameters.AddWithValue("@BARKODNO", txt_BARKODNO.Text);
                     cmd.Parameters.AddWithValue("@MALZEMEADI", txt_MALZEMEADI.Text);
+                    cmd.Parameters.AddWithValue("@MIKTARI", txt_MIKTARI.Text);
+                    cmd.Parameters.AddWithValue("@ICERIKMIKTARI", txtİcerikMiktari.Text);
+                    cmd.Parameters.AddWithValue("@UYARIMIKTARI", txt_uyariMiktari.Text);
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    MessageBox.Show("Kategori Başarı ile güncellenmiştir.");
+                    MessageBox.Show("MALZEME Başarı ile güncellenmiştir.");
                     GetData("Select * from MALZEME");
                     ClearData();
                 }
@@ -187,6 +196,11 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Güncellenecek Malzemeyi seçiniz");
             }
+        }
+
+        private void Txt_MALZEMEADI_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }
