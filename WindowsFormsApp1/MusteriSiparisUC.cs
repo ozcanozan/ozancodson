@@ -457,13 +457,13 @@ namespace WindowsFormsApp1
                         string query2 = "select * from ARADEPO WHERE MALZEMEID=" + MalzemeID;
                         using (SqlConnection con2 = new SqlConnection(this.mUSTERITableAdapter.Connection.ConnectionString))
                         {
-                            SqlCommand cmd2 = new SqlCommand(query, con2);
+                            SqlCommand cmd2 = new SqlCommand(query2, con2);
                             SqlDataReader r2 = null;
                             con2.Open();
                             r2 = cmd2.ExecuteReader();
                             while (r2.Read())
                             {
-                                aradepodakimiktar = Convert.ToInt32(r["MIKTARI"].ToString());
+                                aradepodakimiktar = Convert.ToInt32(r2["MIKTARI"].ToString());
                                 break;
                             }
                             if (aradepodakimiktar < dusulecekmiktar)
