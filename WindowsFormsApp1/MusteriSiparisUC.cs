@@ -451,6 +451,7 @@ namespace WindowsFormsApp1
                     while (r.Read())
                     {
                         int MalzemeID = Convert.ToInt32(r["MALZEMEID"].ToString());
+                        string MalzemeAdi = r["MALZEMEADI"].ToString();
                         int dusulecekmiktar = Convert.ToInt32(r["MIKTARI"].ToString()) * miktar;
                         int aradepodakimiktar = 0;
                        
@@ -461,10 +462,34 @@ namespace WindowsFormsApp1
                             SqlDataReader r2 = null;
                             con2.Open();
                             r2 = cmd2.ExecuteReader();
+                            bool aradepodavar = false;
                             while (r2.Read())
                             {
+                                aradepodavar = true;
                                 aradepodakimiktar = Convert.ToInt32(r2["MIKTARI"].ToString());
                                 break;
+                            }
+                            if(!aradepodavar)
+                            {
+                                SqlCommand cmd6 = new SqlCommand("INSERT INTO [dbo].[ARADEPO]([MALZEMEID],[MALZEMEADI],[MIKTARI],[TARIH],[ALISFIYATI],[SATISFIYATI]) VALUES(@MALZEMEID,@MALZEMEADI,@MIKTARI,@TARIH,@ALISFIYATI,@SATISFIYATI)", conn);
+
+                                cmd6.Transaction = tran;
+                                cmd6.Parameters.AddWithValue("@MALZEMEADI", MalzemeAdi);
+                                cmd6.Parameters.AddWithValue("@MALZEMEID", MalzemeID);
+                                cmd6.Parameters.AddWithValue("@MIKTARI", 0);
+                                cmd6.Parameters.AddWithValue("@ALISFIYATI", 0);
+                                cmd6.Parameters.AddWithValue("@SATISFIYATI",0);
+                                cmd6.Parameters.AddWithValue("@TARIH", DateTime.Now);
+                                cmd6.ExecuteNonQuery();
+                                //        con.Open();
+                                //        cmd.Parameters.AddWithValue("@MALZEMEADI", txt_MALZEMEADI.Text);
+                                //        cmd.Parameters.AddWithValue("@MALZEMEID", malzemeID);
+                                //        cmd.Parameters.AddWithValue("@MIKTARI", txt_MIKTARI.Text);
+                                //        //cmd.Parameters.AddWithValue("@ALISFIYATI", txt_ALISFIYATI.Text);
+                                //        //cmd.Parameters.AddWithValue("@SATISFIYATI", txt_SATISFIYATI.Text);
+                                //        cmd.Parameters.AddWithValue("@TARIH", txt_TARIH.Text);
+                                //        cmd.ExecuteNonQuery();
+                                //        con.Close();
                             }
                             if (aradepodakimiktar < dusulecekmiktar)
                             {
